@@ -1160,18 +1160,38 @@
 </footer>
 
 <script>
-  // Active nav highlight on scroll
-  const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 80) current = s.id;
+  const navTargets = Array.from(navLinks)
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  function updateActiveNav() {
+    const scrollPosition = window.scrollY + 120;
+    let current = navTargets[0]?.id;
+
+    navTargets.forEach(target => {
+      const targetTop = target.getBoundingClientRect().top + window.scrollY;
+      if (scrollPosition >= targetTop) current = target.id;
     });
+
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      current = navTargets[navTargets.length - 1]?.id;
+    }
+
     navLinks.forEach(a => {
       a.classList.toggle('active', a.getAttribute('href') === '#' + current);
     });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+    });
   });
+
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  window.addEventListener('load', updateActiveNav);
 </script>
 
 <script>
