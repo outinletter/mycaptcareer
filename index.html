@@ -465,10 +465,11 @@
     /* ── CONTACT ── */
     #contact {
       padding-top: 28px; padding-bottom: 36px;
+      display: flex; align-items: center; justify-content: center; gap: 14px;
       text-align: center;
     }
-    #contact .section-title { font-size: 1.25rem; margin-bottom: 3px; }
-    #contact .section-sub   { font-size: 0.85rem; margin-bottom: 16px; }
+    #contact .section-title { font-size: 1.25rem; margin: 0; }
+    #contact .section-sub   { font-size: 0.85rem; margin: 0; }
     .contact-strip {
       display: inline-flex; align-items: center;
       gap: 0;
@@ -510,6 +511,7 @@
       #pub-list .book-card { flex-basis: 160px; width: 160px; }
       .app-card { grid-template-columns: 1fr; }
       .tl-item { grid-template-columns: 1fr 60px 1fr; }
+      #contact { flex-wrap: wrap; }
       .contact-strip { border-radius: 16px; }
       footer { padding: 32px 24px; }
     }
