@@ -113,12 +113,6 @@
       max-width: 480px; margin-bottom: 40px;
     }
     .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-    .hero-btns .btn-primary {
-      width: 200px;
-      padding: 8px 24px;
-      box-sizing: border-box;
-      justify-content: center;
-    }
     .btn-outline {
       padding: 12px 28px; border: 1.5px solid var(--border);
       border-radius: 8px; background: #fff;
@@ -383,15 +377,6 @@
       flex: 0 0 210px;
       width: 210px;
     }
-    #app-list .books-grid,
-    #pub-list .books-grid {
-      gap: 18px;
-    }
-    #app-list .book-card,
-    #pub-list .book-card {
-      flex-basis: 180px;
-      width: 180px;
-    }
     .book-card:hover {
       box-shadow: 0 16px 48px rgba(0,40,120,0.13);
       transform: translateY(-4px);
@@ -470,12 +455,11 @@
 
     /* ── CONTACT ── */
     #contact {
-      padding-top: 28px; padding-bottom: 36px;
-      display: flex; align-items: center; justify-content: center; gap: 14px;
+      padding-top: 48px; padding-bottom: 64px;
       text-align: center;
     }
-    #contact .section-title { font-size: 1.25rem; margin: 0; }
-    #contact .section-sub   { font-size: 0.85rem; margin: 0; }
+    #contact .section-title { font-size: 1.5rem; margin-bottom: 6px; }
+    #contact .section-sub   { margin-bottom: 28px; }
     .contact-strip {
       display: inline-flex; align-items: center;
       gap: 0;
@@ -485,16 +469,16 @@
       background: #fff;
     }
     .contact-item {
-      display: flex; align-items: center; gap: 6px;
-      padding: 8px 18px;
+      display: flex; align-items: center; gap: 8px;
+      padding: 12px 28px;
       color: var(--text-mid);
-      font-size: 0.8rem;
+      font-size: 0.88rem;
     }
     .contact-item svg { color: var(--blue-bright); flex-shrink: 0; }
     .contact-item a { color: var(--text-dark); text-decoration: none; font-weight: 500; transition: color .2s; }
     .contact-item a:hover { color: var(--blue-bright); }
     .contact-item span { font-weight: 500; color: var(--text-dark); }
-    .contact-divider { width: 1px; height: 16px; background: var(--border); flex-shrink: 0; }
+    .contact-divider { width: 1px; height: 20px; background: var(--border); flex-shrink: 0; }
 
     /* ── FOOTER ── */
     footer {
@@ -513,11 +497,8 @@
       .about-grid { grid-template-columns: 1fr; }
       .cert-grid { grid-template-columns: repeat(2,1fr); }
       .book-card { flex: 0 0 180px; width: 180px; }
-      #app-list .book-card,
-      #pub-list .book-card { flex-basis: 160px; width: 160px; }
       .app-card { grid-template-columns: 1fr; }
       .tl-item { grid-template-columns: 1fr 60px 1fr; }
-      #contact { flex-wrap: wrap; }
       .contact-strip { border-radius: 16px; }
       footer { padding: 32px 24px; }
     }
@@ -709,9 +690,9 @@
     <h1 class="hero-title">Airline Captain,<br>&amp; Author</h1>
     <p class="hero-desc">Transforming aviation expertise into digital innovation and literary inspiration.</p>
     <div class="hero-btns">
-      <a href="https://outinletter.github.io/bb787memo/" target="_blank" class="btn-primary">B787 Quiz</a>
+      <a href="#about" class="btn-outline">Learn More</a>
       <a href="https://outinletter.github.io/a321systemguide/" target="_blank" class="btn-primary">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 640 512" fill="currentColor" style="flex-shrink:0;"><path d="M381 114.9L186.1 41.8c-16.7-6.2-35.2-5.3-51.1 2.7L89.1 67.4C78 73 77.2 88.5 87.6 95.2l146.9 94.5L136 240 77.8 214.1c-8.7-3.9-18.8-3.7-27.3 .6L18.3 230.8c-9.3 4.7-11.8 16.8-5 24.7l73.1 85.3c6.1 7.1 15 11.2 24.4 11.2H248.4c5 0 9.9-1.2 14.3-3.4L535.6 212c46.5-23.3 82.5-63.3 100.8-112C645 87.5 630 72 612.4 72H510.6c-59.9 0-118.7 17.8-168.5 51.4l-37.7-7.3 76.6-1.2z"/></svg> Airbus Details
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 640 512" fill="currentColor" style="flex-shrink:0;"><path d="M381 114.9L186.1 41.8c-16.7-6.2-35.2-5.3-51.1 2.7L89.1 67.4C78 73 77.2 88.5 87.6 95.2l146.9 94.5L136 240 77.8 214.1c-8.7-3.9-18.8-3.7-27.3 .6L18.3 230.8c-9.3 4.7-11.8 16.8-5 24.7l73.1 85.3c6.1 7.1 15 11.2 24.4 11.2H248.4c5 0 9.9-1.2 14.3-3.4L535.6 212c46.5-23.3 82.5-63.3 100.8-112C645 87.5 630 72 612.4 72H510.6c-59.9 0-118.7 17.8-168.5 51.4l-37.7-7.3 76.6-1.2z"/></svg> Airbus System Details
       </a>
 
     </div>
@@ -955,7 +936,7 @@
       <div class="book-card" onclick="window.open('https://outinletter.github.io/texthighlighter', '_blank')" style="cursor:pointer;">
         <div class="book-cover-wrap">
           <div class="book-cover-placeholder" style="background:none; padding:0; align-items:stretch;">
-            <img src="https://raw.githubusercontent.com/outinletter/texthighlighter/main/notamhighlighter.png" alt="NOTAM Highlighter" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
+            <img src="https://github.com/outinletter/texthighlighter/blob/main/notamhighlighter.png?raw=true" alt="NOTAM Highlighter" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
             <div class="book-cover-info" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%); padding:16px 14px 12px;">
               <p class="book-cover-pub">DEVELOPED: 2024</p>
               <p class="book-cover-name">NOTAM Highlighter</p>
@@ -964,24 +945,7 @@
         </div>
         <div class="book-body">
           <h4 class="book-title"><a href="https://outinletter.github.io/texthighlighter" target="_blank" class="book-link">NOTAM Highlighter</a></h4>
-          <p class="book-desc">Highlights critical NOTAM keywords and route restrictions in flight-package PDFs. It also creates bookmarks for key document sections.</p>
-        </div>
-      </div>
-
-      <!-- App Mayday -->
-      <div class="book-card" onclick="window.open('https://outinletter.github.io/maydayatc/', '_blank')" style="cursor:pointer;">
-        <div class="book-cover-wrap">
-          <div class="book-cover-placeholder" style="background:none; padding:0; align-items:stretch;">
-            <img src="https://raw.githubusercontent.com/outinletter/maydayatc/main/ic_launcher-playstore.png" alt="Mayday" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
-            <div class="book-cover-info" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%); padding:16px 14px 12px;">
-              <p class="book-cover-pub">DEVELOPED: 2026</p>
-              <p class="book-cover-name">Mayday</p>
-            </div>
-          </div>
-        </div>
-        <div class="book-body">
-          <h4 class="book-title"><a href="https://outinletter.github.io/maydayatc/" target="_blank" class="book-link">Mayday ATC Radio Archive</a></h4>
-          <p class="book-desc">A curated archive of real aviation emergency ATC communications. Browse incidents by emergency category.</p>
+          <p class="book-desc">Smart Auto-Highlighting: Scans critical NOTAM keywords and route restrictions within your flight package (PDF) and highlights them in designated colors. <br>✓ Intelligent Bookmark Generation: Automatically inserts PDF bookmarks for key sections such as 'CFP PLAN', 'COPY OF ATS FPL', and 'WEATHER BRIEFING'.</p>
         </div>
       </div>
 
@@ -989,7 +953,7 @@
       <div class="book-card" onclick="window.open('https://outinletter.github.io/crewclock/', '_blank')" style="cursor:pointer;">
         <div class="book-cover-wrap">
           <div class="book-cover-placeholder" style="background:none; padding:0; align-items:stretch;">
-            <img src="https://raw.githubusercontent.com/outinletter/crewclock/main/app_icon.png" alt="CrewClock" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
+            <img src="https://github.com/outinletter/crewclock/blob/main/app_icon.png?raw=true" alt="CrewClock" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
             <div class="book-cover-info" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%); padding:16px 14px 12px;">
               <p class="book-cover-pub">DEVELOPED: 2024</p>
               <p class="book-cover-name">CrewClock</p>
@@ -998,7 +962,7 @@
         </div>
         <div class="book-body">
           <h4 class="book-title"><a href="https://outinletter.github.io/crewclock/" target="_blank" class="book-link">CrewClock</a></h4>
-          <p class="book-desc">A time and mission management app for airline crews. It provides global time tracking and operational timing tools.</p>
+          <p class="book-desc">A professional time management and mission timing app designed for airline crew. Features precise global time tracking and mission execution tools.</p>
         </div>
       </div>
 
@@ -1006,7 +970,7 @@
       <div class="book-card" onclick="window.open('https://outinletter.github.io/sajulotto/', '_blank')" style="cursor:pointer;">
         <div class="book-cover-wrap">
           <div class="book-cover-placeholder" style="background:none; padding:0; align-items:stretch;">
-            <img src="https://raw.githubusercontent.com/outinletter/sajulotto/main/sajulottoicon.png" alt="SajuLotto" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
+            <img src="https://github.com/outinletter/sajulotto/blob/main/store-icons/sajulotto.png?raw=true" alt="SajuLotto" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
             <div class="book-cover-info" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%); padding:16px 14px 12px;">
               <p class="book-cover-pub">DEVELOPED: 2024</p>
               <p class="book-cover-name">Saju &amp; Lotto</p>
@@ -1015,10 +979,9 @@
         </div>
         <div class="book-body">
           <h4 class="book-title"><a href="https://outinletter.github.io/sajulotto/" target="_blank" class="book-link">Heaven's Secret: Saju &amp; Lotto</a></h4>
-          <p class="book-desc">Combines traditional Saju analysis with weekly energy to suggest lucky numbers. It also provides fortune and elemental balance reports.</p>
+          <p class="book-desc">A unique platform that harmonizes traditional Saju (Four Pillars of Destiny) with weekly cosmic energy to recommend personalized lucky numbers. Includes detailed fortune analysis and elemental balance reports.</p>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -1042,7 +1005,7 @@
       </div>
       <div class="book-body">
         <h4 class="book-title"><a href="https://www.amazon.com/-/ko/dp/B0GXCFHZBL/ref=sr_1_2?crid=N3TD7CGLGI2V&dib=eyJ2IjoiMSJ9.MYK73MclFKDUG3wPnvblO_J1Y8xbX3Hz1N-Zn6-Ai3GvFnRZBxTwurtf9QnFDx_hf_yi2iUy0VfOuVlkIQllFuNyJqfnCcuuXImghMqdBsyOmrHTCHfqHziO1czoAYtK6ttmLVHXI77JR76ZFlzyKV6NskpAKQleAgUvVW2cxMpQ85dcEi2nPzbkphWvBuKFbmcBs6tOFID_7J56jvh_XPmgWd3Zd5nujBIxmOiwNAY.DNlvbeLKou3tPK_OE2d8iPyYyZsPm_reXChst55yAng&dib_tag=se&keywords=bong+su+jeon&qid=1778215914&sprefix=bong+su+je%2Caps%2C281&sr=8-2" target="_blank" class="book-link">Pilot's Route</a></h4>
-        <p class="book-desc">A journey through 76 major cities around the world. Each destination reveals its own memorable story.</p>
+        <p class="book-desc">The Grand Journey Through 76 Major Global Cities — 76 destinations, countless stories.</p>
       </div>
     </div>
 
@@ -1059,7 +1022,7 @@
       </div>
       <div class="book-body">
         <h4 class="book-title"><a href="https://www.amazon.com/A321-System-Guide-Comprehensive-Companion-ebook/dp/B0D2QCLXT7/ref=sr_1_1?crid=YCIM9SHHT26T&dib=eyJ2IjoiMSJ9.yj0bWZDLb-wkajF2NlDD6iWcwgWYYP0VIm3YrlZdE0ifdogWtBQSD1sQ9xJflczA3duTYAgopDoTsXSiQj26jDm9JSfu6l8nX3Ws9itlpXw.UL-v9ExwTrjFfdH5LcXyN-qYa1vAl88dGNHUue1n930&dib_tag=se&keywords=a321+system+guide&qid=1777767076&sprefix=a321+system+g%2Caps%2C594&sr=8-1" target="_blank" class="book-link">A321 System Guide</a></h4>
-        <p class="book-desc">A practical guide to A321 aircraft systems and procedures. It explains key operational details for pilots and aviation enthusiasts.</p>
+        <p class="book-desc">A comprehensive companion covering A321 aircraft systems, procedures, and operational nuances for pilots and aviation enthusiasts.</p>
       </div>
     </div>
 
@@ -1076,7 +1039,7 @@
       </div>
       <div class="book-body">
         <h4 class="book-title"><a href="https://bookk.co.kr/bookStore/69f01cbe6d91503d90724250" target="_blank" class="book-link">Your Flight is Still Radiant</a></h4>
-        <p class="book-desc">Flight experience and AI insights offer guidance through life's turbulence. The book addresses 30 common concerns with clear perspectives.</p>
+        <p class="book-desc">For a pilot, turbulence encountered during flight is not a disaster to be avoided, but a signal to move toward clearer upper currents. Combining years of flight records with logical AI insights, this book carefully captures answers to 30 common life concerns we all share.</p>
       </div>
     </div>
 
@@ -1095,7 +1058,7 @@
       </div>
       <div class="book-body">
         <h4 class="book-title"><a href="https://bookk.co.kr/bookStore/67ee3e7185a9e0fa0127cd26" target="_blank" class="book-link">Only You are Stopping You</a></h4>
-        <p class="book-desc">A motivational guide to overcoming self-imposed limits. It offers practical strategies for growth and mindset change.</p>
+        <p class="book-desc">A motivational guide presenting ways to overcome self-imposed limits and achieve personal growth through practical strategies and mindset changes.</p>
       </div>
     </div>
 
@@ -1112,7 +1075,7 @@
       </div>
       <div class="book-body">
         <h4 class="book-title"><a href="https://bookk.co.kr/bookStore/67a31b15f3250118b26d2dfe" target="_blank" class="book-link">Wisdom in Words</a></h4>
-        <p class="book-desc">Explores how English proverbs shape thought and decision-making. It offers practical lessons for clearer communication.</p>
+        <p class="book-desc">Explores how language shapes our thoughts and decision-making through English proverbs, offering a practical approach to improving communication skills.</p>
       </div>
     </div>
 
@@ -1129,7 +1092,7 @@
       </div>
       <div class="book-body">
         <h4 class="book-title"><a href="https://bookk.co.kr/bookStore/66974692985e94f910b56bea" target="_blank" class="book-link">Practice Reading Good Thoughts, Short and Long</a></h4>
-        <p class="book-desc">Shows how to gain useful insights during short or long breaks. It presents efficient reading and information-processing methods.</p>
+        <p class="book-desc">How do you spend your occasional rest time? This book teaches how to gain valuable insights in both short and long periods by presenting efficient reading and information processing methods.</p>
       </div>
     </div>
 
@@ -1160,38 +1123,18 @@
 </footer>
 
 <script>
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
-  const navTargets = Array.from(navLinks)
-    .map(link => document.querySelector(link.getAttribute('href')))
-    .filter(Boolean);
-
-  function updateActiveNav() {
-    const scrollPosition = window.scrollY + 120;
-    let current = navTargets[0]?.id;
-
-    navTargets.forEach(target => {
-      const targetTop = target.getBoundingClientRect().top + window.scrollY;
-      if (scrollPosition >= targetTop) current = target.id;
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) current = s.id;
     });
-
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
-      current = navTargets[navTargets.length - 1]?.id;
-    }
-
     navLinks.forEach(a => {
       a.classList.toggle('active', a.getAttribute('href') === '#' + current);
     });
-  }
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.forEach(a => a.classList.remove('active'));
-      link.classList.add('active');
-    });
   });
-
-  window.addEventListener('scroll', updateActiveNav, { passive: true });
-  window.addEventListener('load', updateActiveNav);
 </script>
 
 <script>
