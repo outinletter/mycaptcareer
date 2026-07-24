@@ -216,7 +216,18 @@
       background: #fff; border-radius: 12px;
       padding: 24px 28px;
       box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      position: relative; overflow: hidden;
     }
+    .tl-card .tl-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      opacity: 0.10;
+      filter: blur(1px);
+      z-index: 0;
+      transition: opacity .3s;
+    }
+    .tl-card:hover .tl-bg { opacity: 0.16; }
+    .tl-card > *:not(.tl-bg) { position: relative; z-index: 1; }
     .tl-card h4 {
       font-size: 1.05rem; font-weight: 700;
       color: var(--blue-bright); margin-bottom: 8px;
@@ -389,8 +400,8 @@
     }
     #app-list .book-card,
     #pub-list .book-card {
-      flex-basis: 180px;
-      width: 180px;
+      flex-basis: 155px;
+      width: 155px;
     }
     .book-card:hover {
       box-shadow: 0 16px 48px rgba(0,40,120,0.13);
@@ -712,8 +723,8 @@
     <li><a href="#about">About</a></li>
     <li><a href="#career">Career</a></li>
     <li><a href="#project-aifas">Project</a></li>
-    <li><a href="#app-list">Application</a></li>
-    <li><a href="#pub-list">Publication</a></li>
+    <li><a href="#app-list" onclick="event.preventDefault();var el=document.getElementById('app-list');window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});">Application</a></li>
+    <li><a href="#pub-list" onclick="event.preventDefault();var el=document.getElementById('pub-list');window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});">Publication</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -780,6 +791,7 @@
     <!-- B787 Captain -->
     <div class="tl-item">
       <div class="tl-card left current">
+        <div class="tl-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Korean_Air_Boeing_787-9_HL8082.jpg/1280px-Korean_Air_Boeing_787-9_HL8082.jpg')"></div>
         <span class="tl-badge">Current</span>
         <h4>B787 Captain</h4>
         <p>Transitioned to Captain on the Boeing 787 Dreamliner, commanding long-haul international routes with advanced next-generation aircraft technology.</p>
@@ -799,6 +811,7 @@
         <span class="tl-date">JUNE 13, 2023</span>
       </div>
       <div class="tl-card right">
+        <div class="tl-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Korean_Air_A321-200_HL7713.jpg/1280px-Korean_Air_A321-200_HL7713.jpg')"></div>
         <h4>A321 Captain</h4>
         <p>Promoted to Captain on the Airbus A321, taking command responsibility for aircraft, crew and passengers on regional and international routes.</p>
       </div>
@@ -812,6 +825,7 @@
         <span class="tl-date">DECEMBER 15, 2015</span>
       </div>
       <div class="tl-card right">
+        <div class="tl-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Korean_Air_Airbus_A380_%28HL7611%29_at_Hong_Kong_International_Airport.jpg/1280px-Korean_Air_Airbus_A380_%28HL7611%29_at_Hong_Kong_International_Airport.jpg')"></div>
         <h4>A380 First Officer</h4>
         <p>Advanced to the prestigious Airbus A380 superjumbo, operating flagship long-haul routes to major international destinations.</p>
       </div>
@@ -820,6 +834,7 @@
     <!-- A330 First Officer -->
     <div class="tl-item">
       <div class="tl-card left">
+        <div class="tl-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Korean_Air_Airbus_A330-200_HL7552_ICN.jpg/1280px-Korean_Air_Airbus_A330-200_HL7552_ICN.jpg')"></div>
         <h4>A330 First Officer</h4>
         <p>Transitioned to the Airbus A330, expanding capabilities to handle medium to long-haul international routes.</p>
       </div>
@@ -838,6 +853,7 @@
         <span class="tl-date">NOVEMBER 25, 2009</span>
       </div>
       <div class="tl-card right">
+        <div class="tl-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Korean_Air_Boeing_737-900_HL7725_PEK.jpg/1280px-Korean_Air_Boeing_737-900_HL7725_PEK.jpg')"></div>
         <h4>B737 First Officer</h4>
         <p>Qualified as First Officer on the Boeing 737, beginning active flight duties on short to medium haul routes.</p>
       </div>
@@ -846,6 +862,7 @@
     <!-- Korean Air Recruitment -->
     <div class="tl-item">
       <div class="tl-card left">
+        <div class="tl-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Korean_Air_Boeing_787-9_HL8082.jpg/1280px-Korean_Air_Boeing_787-9_HL8082.jpg')"></div>
         <h4>Korean Air Recruitment</h4>
         <p>Began my journey with Korean Air, starting the foundation of my aviation career.</p>
       </div>
