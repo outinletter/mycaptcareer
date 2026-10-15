@@ -209,7 +209,7 @@ footer{padding:30px 0 60px;font:400 13px var(--mono);color:var(--muted)}
     </svg>
   </div>
   <div class="tb">
-    <div><span>Flight experience</span><b>17+</b><small>years</small></div>
+    <div><span>Flight experience</span><b><span data-experience-years style="display:inline;font:inherit;color:inherit">17</span>+</b><small>years</small></div>
     <div><span>Aircraft types</span><b>5</b></div>
     <div><span>Apps built</span><b>8</b></div>
     <div><span>Books published</span><b>7</b></div>
@@ -220,7 +220,7 @@ footer{padding:30px 0 60px;font:400 13px var(--mono);color:var(--muted)}
   <div class="sh"><h2>About</h2><span>General notes</span></div>
   <div class="about">
     <ol class="notes">
-      <li><b>Professional philosophy</b>As a Korean Air B787 Captain with over 17 years of experience, I've embraced the philosophy of "continuous challenge and growth" throughout my career.</li>
+      <li><b>Professional philosophy</b>As a Korean Air B787 Captain with over <span data-experience-years>17</span> years of experience, I've embraced the philosophy of "continuous challenge and growth" throughout my career.</li>
       <li><b>Aviation expertise</b>From A380 to B787, with B737, A330 and A321 along the way. Short-, medium- and long-haul operations, complex airspace and multi-crew coordination.</li>
       <li><b>Knowledge sharing</b>Books that inspire and educate across different disciplines. Each field reinforces my commitment to precision, innovation, and effective communication.</li>
     </ol>
@@ -336,6 +336,8 @@ footer{padding:30px 0 60px;font:400 13px var(--mono);color:var(--muted)}
 <footer><div class="wrap">© 2026 BS Jeon. All rights reserved.</div></footer>
 
 <script>
+const experienceYears=new Date().getFullYear()-2009;
+document.querySelectorAll('[data-experience-years]').forEach(el=>el.textContent=experienceYears);
 const rt=document.getElementById('route'),rf=document.getElementById('rf'),wps=[...document.querySelectorAll('.wp')];
 function prog(){
   const r=rt.getBoundingClientRect(),y=innerHeight*.6;
