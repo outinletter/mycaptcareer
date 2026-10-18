@@ -160,7 +160,22 @@ a.card:hover{background:var(--bg2);border-color:var(--white)}
 @media(max-width:760px){.ct{grid-template-columns:1fr}.ct>div+div{border-left:0;border-top:1px solid var(--line)}}
 footer{padding:30px 0 60px;font:400 13px var(--mono);color:var(--muted)}
 
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.draw{animation:none;stroke-dashoffset:0}.lab{animation:none;opacity:1}}
+/* Link feedback for pointer, keyboard and touch */
+a[href]{transition:color .2s,background-color .2s,border-color .2s,box-shadow .2s,transform .2s}
+nav a,.btn{display:inline-block}
+a[href]:is(:focus-visible,:active){color:var(--mark)}
+:is(a.card,a.row,.btn):is(:focus-visible,:active){background:var(--bg2);border-color:var(--mark);box-shadow:0 8px 20px rgba(0,0,0,.25);transform:perspective(900px) translateY(-3px) rotateX(1deg);position:relative;z-index:1}
+:is(a.card,a.row):is(:focus-visible,:active) h3{color:var(--mark)}
+.btn.main:is(:focus-visible,:active){background:var(--white);color:var(--bg2)}
+nav a:is(:focus-visible,:active),.ct a.m:is(:focus-visible,:active){border-color:var(--mark);text-shadow:0 0 14px rgba(255,209,102,.35)}
+@media(hover:hover) and (pointer:fine){
+  a[href]:hover{color:var(--mark)}
+  :is(a.card,a.row,.btn):hover{background:var(--bg2);border-color:var(--mark);box-shadow:0 12px 24px rgba(0,0,0,.3);transform:perspective(900px) translateY(-4px) rotateX(1deg);position:relative;z-index:1}
+  :is(a.card,a.row):hover h3{color:var(--mark)}
+  .btn.main:hover{background:var(--white);color:var(--bg2)}
+  nav a:hover,.ct a.m:hover{border-color:var(--mark);text-shadow:0 0 14px rgba(255,209,102,.35)}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}a[href]{transform:none!important}.draw{animation:none;stroke-dashoffset:0}.lab{animation:none;opacity:1}}
 </style>
 </head>
 <body>
