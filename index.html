@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-v2.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BS Jeon">
+<meta name="theme-color" content="#0f3d73">
 <link rel="icon" type="image/png" href="CaptIcon.png">
 <title>Pilot | Author - Personal Portfolio</title>
 <meta name="description" content="Korean Air B787 Captain, developer and author.">
@@ -275,19 +279,19 @@ nav a:is(:focus-visible,:active),.ct a.m:is(:focus-visible,:active){border-color
       <span class="go">Analyze a flight</span>
     </a>
     <a class="card app" href="https://outinletter.github.io/texthighlighter">
-      <img src="https://raw.githubusercontent.com/outinletter/texthighlighter/main/notamhighlighter.png" alt="" loading="lazy">
+      <img src="assets/apps/notamhighlighter.png" alt="" loading="lazy">
       <div><span class="t">2024</span><h3>NOTAM Highlighter</h3><p>Highlights critical NOTAM keywords and route restrictions in flight-package PDFs, and bookmarks key sections.</p></div>
     </a>
     <a class="card app" href="https://outinletter.github.io/maydayatc/">
-      <img src="https://raw.githubusercontent.com/outinletter/maydayatc/main/ic_launcher-playstore.png" alt="" loading="lazy">
+      <img src="assets/apps/ic_launcher-playstore.png" alt="" loading="lazy">
       <div><span class="t">2026</span><h3>Mayday ATC Radio Archive</h3><p>Real aviation emergency ATC communications, browsable by emergency category.</p></div>
     </a>
     <a class="card app" href="https://outinletter.github.io/crewclock/">
-      <img src="https://raw.githubusercontent.com/outinletter/crewclock/main/app_icon.png" alt="" loading="lazy">
+      <img src="assets/apps/app_icon.png" alt="" loading="lazy">
       <div><span class="t">2024</span><h3>CrewClock</h3><p>Global time tracking and mission timing tools for airline crews.</p></div>
     </a>
     <a class="card app" href="https://outinletter.github.io/sajulotto/">
-      <img src="https://raw.githubusercontent.com/outinletter/sajulotto/main/app/src/main/assets/icons/sajulottoicon.png" alt="" loading="lazy">
+      <img src="assets/apps/sajulottoicon.png" alt="" loading="lazy">
       <div><span class="t">2024</span><h3>Saju &amp; Lotto</h3><p>Combines traditional Saju analysis with weekly energy to suggest lucky numbers and elemental balance reports.</p></div>
     </a>
     <a class="card app" href="https://apps.apple.com/kr/app/wordahead-%EC%9E%90%EB%A7%89-%EC%98%81%EC%96%B4-%EB%8B%A8%EC%96%B4%EC%9E%A5/id6820383313?l=en-GB">
@@ -352,6 +356,9 @@ nav a:is(:focus-visible,:active),.ct a.m:is(:focus-visible,:active){border-color
 <footer><div class="wrap">© 2026 BS Jeon. All rights reserved.</div></footer>
 
 <script>
+if('serviceWorker' in navigator){
+  addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(error=>console.warn('Offline setup failed:',error)));
+}
 const experienceYears=new Date().getFullYear()-2009;
 document.querySelectorAll('[data-experience-years]').forEach(el=>el.textContent=experienceYears);
 const rt=document.getElementById('route'),rf=document.getElementById('rf'),wps=[...document.querySelectorAll('.wp')];
