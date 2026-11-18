@@ -69,14 +69,14 @@ h1{font:700 clamp(58px,9.4vw,132px)/.92 var(--head);letter-spacing:-.01em}
 @keyframes fade{to{opacity:1}}
 
 /* title block */
-.tb{margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:var(--bg2)}
+.tb{margin-top:64px;display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);background:var(--bg2)}
 .tb div{padding:14px 20px;border-right:1px solid var(--line)}
 .tb div:last-child{border-right:0}
 .tb span{display:block;font:400 12px var(--mono);color:var(--muted)}
 .tb b{font:700 44px/1.1 var(--head)}
 .tb small{font:400 14px var(--head);color:var(--muted);margin-left:4px}
 @media(max-width:900px){.hero{grid-template-columns:1fr}.plane{max-width:420px;margin:0 auto}}
-@media(max-width:640px){.tb{grid-template-columns:repeat(2,1fr)}.tb div:nth-child(2){border-right:0}.tb div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:640px){.tb{grid-template-columns:repeat(2,1fr)}.tb div:nth-child(even){border-right:0}.tb div:nth-child(-n+4){border-bottom:1px solid var(--line)}}
 
 /* sections */
 section.s{padding:96px 0}
@@ -232,8 +232,9 @@ nav a:is(:focus-visible,:active),.ct a.m:is(:focus-visible,:active){border-color
   <div class="tb">
     <div><span>Flight experience</span><b><span data-experience-years style="display:inline;font:inherit;color:inherit">17</span>+</b><small>years</small></div>
     <div><span>Aircraft types</span><b>5</b></div>
-    <div><span>Apps built</span><b>8</b></div>
+    <div><span>Apps built</span><b>13</b></div>
     <div><span>Books published</span><b>7</b></div>
+    <div><span>Patents</span><b>1</b></div>
   </div>
 </div></section>
 
